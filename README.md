@@ -42,5 +42,44 @@ fun simpleCircularProgress() {
     )
 }
 ```
+Animated Determinate Progressbar
 
+```Kotlin
+@Composable
+fun determinateProgressSample() {
+    DeterminateProgress(
+        modifier = Modifier,
+        radius = 80.dp,
+        indicatorColor = Color.Blue,
+        trackColor = Color.Blue.copy(0.2f),
+        indicatorStrokeWidth = 10.dp,
+        trackStrokeWidth = 10.dp,
+        progress = 90f,
+        rotate = Rotate.RIGHT,
+        roundedBorder = true,
+        durationInMilliSecond = 10000,
+        startDelay = 3000,
+        waveAnimation = true
+    )
+}
+```
+
+Indeterminate ProgressBar
+
+```Kotlin
+@Composable
+fun infiniteProgressSample() {
+    IndeterminateProgress(
+        modifier = Modifier,
+        radius = 80.dp,
+        indicatorColor = Color.Blue,
+        trackColor = Color.Blue.copy(0.2f),
+        indicatorStrokeWidth = 10.dp,
+        trackStrokeWidth = 10.dp,
+        rotate = Rotate.RIGHT,
+        roundedBorder = true,
+        durationInMilliSecond = 1400
+    )
+}
+```
 

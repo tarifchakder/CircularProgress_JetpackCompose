@@ -30,15 +30,15 @@ class MainActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    SimpleCircularProgress()
+                    //  SimpleCircularProgress()
 
-                   // Spacer(modifier = Modifier.padding(10.dp))
+                    // Spacer(modifier = Modifier.padding(10.dp))
 
-                    //determinateProgressSample()
+                    determinateProgressSample()
 
-                  //  Spacer(modifier = Modifier.padding(10.dp))
+                    //  Spacer(modifier = Modifier.padding(10.dp))
 
-                  // infiniteProgressSample()
+                    // infiniteProgressSample()
 
                 }
             }
@@ -47,8 +47,8 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun SimpleCircularProgress(){
-    val progress  = remember { mutableStateOf(0f) }
+fun SimpleCircularProgress() {
+    val progress = remember { mutableStateOf(0f) }
     LaunchedEffect(true) {
         delay(2000)
         for (i in 0..5) {
@@ -75,7 +75,15 @@ fun SimpleCircularProgress(){
 @Composable
 fun infiniteProgressSample() {
     IndeterminateProgress(
-        modifier = Modifier
+        modifier = Modifier,
+        radius = 80.dp,
+        indicatorColor = Color.Blue,
+        trackColor = Color.Blue.copy(0.2f),
+        indicatorStrokeWidth = 10.dp,
+        trackStrokeWidth = 10.dp,
+        rotate = Rotate.RIGHT,
+        roundedBorder = true,
+        durationInMilliSecond = 1400
     )
 }
 
@@ -83,10 +91,16 @@ fun infiniteProgressSample() {
 fun determinateProgressSample() {
     DeterminateProgress(
         modifier = Modifier,
-        progress = 100f,
+        radius = 80.dp,
+        indicatorColor = Color.Blue,
+        trackColor = Color.Blue.copy(0.2f),
+        indicatorStrokeWidth = 10.dp,
+        trackStrokeWidth = 10.dp,
+        progress = 90f,
         rotate = Rotate.RIGHT,
         roundedBorder = true,
-        radius = 80.dp,
+        durationInMilliSecond = 10000,
+        startDelay = 3000,
         waveAnimation = true
     )
 }
