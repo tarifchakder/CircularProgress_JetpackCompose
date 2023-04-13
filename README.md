@@ -19,20 +19,21 @@ Add the dependency to your app `build.gradle` file
 dependencies {
     implementation 'com.github.tarifchakder:CircularProgress_JetpackCompose:1.0'
 }
-
+```
 ## Usage
-
+Simple Circular Progress
 ```kotlin
-CircularProgressBar(
-    modifier = Modifier.size(120.dp),
-    progress = 30f,
-    progressMax = 100f,
-    progressBarColor = Color.Blue,
-    progressBarWidth = 20.dp,
-    backgroundProgressBarColor = Color.Gray,
-    backgroundProgressBarWidth = 10.dp,
-    roundBorder = true,
-    startAngle = 90f
+SimpleCircularProgress(
+    radius = 80.dp,
+    progress = progress.value,
+    maxProgress = 100F,
+    indicatorColor = Color.Blue,
+    indicatorWidth = 10.dp,
+    trackColor = Color.Blue.copy(0.2f),
+    trackWidth = 10.dp,
+    cornerRadius = true,
+    startAngle = 0f,
+    durationInMilliSecond = 2000
 )
 ```
 

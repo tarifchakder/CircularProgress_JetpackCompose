@@ -10,6 +10,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.tarif.circularprogress.ui.theme.AppTheme
 import com.tarif.circularprogressbar.*
@@ -29,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                  //  SimpleCircularProgress()
+                    SimpleCircularProgress()
 
                    // Spacer(modifier = Modifier.padding(10.dp))
 
@@ -37,7 +38,7 @@ class MainActivity : ComponentActivity() {
 
                   //  Spacer(modifier = Modifier.padding(10.dp))
 
-                   infiniteProgressSample()
+                  // infiniteProgressSample()
 
                 }
             }
@@ -57,7 +58,16 @@ fun SimpleCircularProgress(){
     }
 
     SimpleCircularProgress(
+        radius = 80.dp,
         progress = progress.value,
+        maxProgress = 100F,
+        indicatorColor = Color.Blue,
+        indicatorWidth = 10.dp,
+        trackColor = Color.Blue.copy(0.2f),
+        trackWidth = 10.dp,
+        cornerRadius = true,
+        startAngle = 0f,
+        durationInMilliSecond = 2000
     )
 
 }
