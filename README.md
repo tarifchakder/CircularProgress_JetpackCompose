@@ -19,3 +19,52 @@ Add the dependency to your app `build.gradle` file
 dependencies {
     implementation 'com.github.tarifchakder:CircularProgress_JetpackCompose:1.0'
 }
+
+## Usage
+
+```kotlin
+CircularProgressBar(
+    modifier = Modifier.size(120.dp),
+    progress = 30f,
+    progressMax = 100f,
+    progressBarColor = Color.Blue,
+    progressBarWidth = 20.dp,
+    backgroundProgressBarColor = Color.Gray,
+    backgroundProgressBarWidth = 10.dp,
+    roundBorder = true,
+    startAngle = 90f
+)
+```
+
+For animations, you can use any animation API provided by Compose depending on your animation scenario.
+
+```kotlin
+val progress by animateFloatAsState(/* progress value */)
+
+CircularProgressBar(
+    modifier = Modifier.size(120.dp),
+    progress = progress,
+    progressMax = 100f,
+    progressBarColor = Color.Blue,
+    progressBarWidth = 20.dp,
+    backgroundProgressBarColor = Color.Gray,
+    backgroundProgressBarWidth = 10.dp,
+    roundBorder = true,
+    startAngle = 90f
+)
+```
+
+
+## Supported Properties
+| Property                        | Type       | Default        |
+| ------------------------------- | ---------- | -------------- |
+| `progress`                      | Float      | 0f             |
+| `progressMax`                   | Float      | 100f           |
+| `progressBarColor`              | Color      | Color.Black    |
+| `progressBarWidth`              | Dp         | 7.dp           |
+| `backgroundProgressBarColor`    | Color      | Color.Gray     |
+| `backgroundProgressBarWidth`    | Dp         | 3.dp           |
+| `roundBorder`                   | Boolean    | false          |
+| `startAngle`                    | Float      | 0f             |
+
+
