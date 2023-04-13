@@ -40,22 +40,4 @@ fun simpleCircularProgress() {
 }
 ```
 
-For animations, you can use any animation API provided by Compose depending on your animation scenario.
-
-```kotlin
-val progress by animateFloatAsState(/* progress value */)
-
-CircularProgressBar(
-    modifier = Modifier.size(120.dp),
-    progress = progress,
-    progressMax = 100f,
-    progressBarColor = Color.Blue,
-    progressBarWidth = 20.dp,
-    backgroundProgressBarColor = Color.Gray,
-    backgroundProgressBarWidth = 10.dp,
-    roundBorder = true,
-    startAngle = 90f
-)
-```
-
 
