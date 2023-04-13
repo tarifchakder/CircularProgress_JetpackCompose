@@ -31,15 +31,15 @@ class MainActivity : ComponentActivity() {
                 ) {
                     SimpleCircularProgress()
 
-                    Spacer(modifier = Modifier.padding(10.dp))
+                   // Spacer(modifier = Modifier.padding(10.dp))
 
-                    determinateProgressSample()
+                  //  determinateProgressSample()
 
-                    Spacer(modifier = Modifier.padding(10.dp))
+                  //  Spacer(modifier = Modifier.padding(10.dp))
 
-                    infiniteProgressSample()
+                  //  infiniteProgressSample()
 
-                    Spacer(modifier = Modifier.padding(10.dp))
+                  //  Spacer(modifier = Modifier.padding(10.dp))
 
                 }
             }
@@ -51,8 +51,9 @@ class MainActivity : ComponentActivity() {
 fun SimpleCircularProgress(){
     val progress  = remember { mutableStateOf(0f) }
     LaunchedEffect(true) {
+        delay(2000)
         for (i in 0..5) {
-            delay(1000)
+            delay(1500)
             progress.value = progress.value + 20
         }
     }
