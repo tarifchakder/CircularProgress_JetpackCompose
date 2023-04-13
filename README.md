@@ -55,16 +55,3 @@ CircularProgressBar(
 ```
 
 
-## Supported Properties
-| Property                        | Type       | Default        |
-| ------------------------------- | ---------- | -------------- |
-| `progress`                      | Float      | 0f             |
-| `progressMax`                   | Float      | 100f           |
-| `progressBarColor`              | Color      | Color.Black    |
-| `progressBarWidth`              | Dp         | 7.dp           |
-| `backgroundProgressBarColor`    | Color      | Color.Gray     |
-| `backgroundProgressBarWidth`    | Dp         | 3.dp           |
-| `roundBorder`                   | Boolean    | false          |
-| `startAngle`                    | Float      | 0f             |
-
-
