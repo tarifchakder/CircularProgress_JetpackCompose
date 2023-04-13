@@ -42,9 +42,7 @@ fun simpleCircularProgress() {
     )
 }
 ```
-
 Animated Determinate Progressbar
-
 ```Kotlin
 @Composable
 fun determinateProgressSample() {
@@ -64,9 +62,7 @@ fun determinateProgressSample() {
     )
 }
 ```
-
 Indeterminate ProgressBar
-
 ```Kotlin
 @Composable
 fun infiniteProgressSample() {
