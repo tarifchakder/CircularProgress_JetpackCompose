@@ -20,8 +20,8 @@ dependencies {
     implementation 'com.github.tarifchakder:CircularProgress_JetpackCompose:1.0'
 }
 ```
-## Usage
 
+## Usage
 ```kotlin
 @Composable
 fun simpleCircularProgress() {
