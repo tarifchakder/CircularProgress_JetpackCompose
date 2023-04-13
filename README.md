@@ -4,3 +4,13 @@ An android library to easily add circular progress bar into your [Jetpack Compos
 
 ## Have a Look
 <img src="screenshot/circular.gif" width="200" >&emsp;<img src="screenshot/determinate.gif" width="200" >&emsp;<img src="screenshot/indeterminate.gif" width="200" >
+
+## Download
+Add JitPack repository to your root `build.gradle` file
+```
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
