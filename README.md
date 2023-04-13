@@ -21,7 +21,9 @@ dependencies {
 }
 ```
 ## Usage
+
 Simple Circular Progress
+
 ```kotlin
 SimpleCircularProgress(
     radius = 80.dp,
