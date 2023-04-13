@@ -4,5 +4,6 @@ An android library to easily add circular progress bar into your [Jetpack Compos
 
 ## Have a Look
 <p align="center">
+SimpleCircularProgress
     <img src="screenshot/simple_circular.gif" height="500">
 </p>
