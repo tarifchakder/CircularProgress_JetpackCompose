@@ -25,18 +25,21 @@ dependencies {
 Simple Circular Progress
 
 ```kotlin
-SimpleCircularProgress(
-    radius = 80.dp,
-    progress = progress.value,
-    maxProgress = 100F,
-    indicatorColor = Color.Blue,
-    indicatorWidth = 10.dp,
-    trackColor = Color.Blue.copy(0.2f),
-    trackWidth = 10.dp,
-    cornerRadius = true,
-    startAngle = 0f,
-    durationInMilliSecond = 2000
-)
+@Composable
+fun simpleCircularProgress() {
+    SimpleCircularProgress(
+        radius = 80.dp,
+        progress = progress.value,
+        maxProgress = 100F,
+        indicatorColor = Color.Blue,
+        indicatorWidth = 10.dp,
+        trackColor = Color.Blue.copy(0.2f),
+        trackWidth = 10.dp,
+        cornerRadius = true,
+        startAngle = 0f,
+        durationInMilliSecond = 2000
+    )
+}
 ```
 
 For animations, you can use any animation API provided by Compose depending on your animation scenario.
