@@ -17,5 +17,5 @@ allprojects {
 Add the dependency to your app `build.gradle` file
 ```
 dependencies {
-implementation 'com.github.tarifchakder:CircularProgress_JetpackCompose:1.0'
+    implementation 'com.github.tarifchakder:CircularProgress_JetpackCompose:1.0'
 }
