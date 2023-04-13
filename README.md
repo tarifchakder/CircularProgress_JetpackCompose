@@ -1,5 +1,7 @@
 # CircularProgress JetpackCompose
 
+[![](https://jitpack.io/v/ayoubbk/Compose-Circular-Progress-View.svg)](https://jitpack.io/#tarifchakder/CircularProgress_JetpackCompose)
+
 An android library to easily add circular progress bar into your [Jetpack Compose](https://developer.android.com/jetpack/compose) apps.
 
 ## Have a Look
