@@ -3,26 +3,44 @@ package com.tarif.circularprogress
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.tarif.circularprogress.ui.theme.CircularProgress_JetpackComposeTheme
+import androidx.compose.ui.unit.dp
+import com.tarif.circularprogress.ui.theme.AppTheme
+import com.tarif.circularprogressbar.*
+import com.tarif.circularprogressbar.constant.Rotate
+import kotlinx.coroutines.delay
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CircularProgress_JetpackComposeTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+
+            AppTheme {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxHeight(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Greeting("Android")
+                    SimpleCircularProgress()
+
+                    Spacer(modifier = Modifier.padding(10.dp))
+
+                    determinateProgressSample()
+
+                    Spacer(modifier = Modifier.padding(10.dp))
+
+                    infiniteProgressSample()
+
+                    Spacer(modifier = Modifier.padding(10.dp))
+
                 }
             }
         }
@@ -30,14 +48,38 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun SimpleCircularProgress(){
+    val progress  = remember { mutableStateOf(0f) }
+    LaunchedEffect(true) {
+        for (i in 0..5) {
+            delay(1000)
+            progress.value = progress.value + 20
+        }
+    }
+
+    SimpleCircularProgress(
+        progress = progress.value,
+    )
+
 }
 
-@Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
-    CircularProgress_JetpackComposeTheme {
-        Greeting("Android")
-    }
+fun infiniteProgressSample() {
+    IndeterminateProgress(
+        modifier = Modifier
+    )
+}
+
+@Composable
+fun determinateProgressSample() {
+    DeterminateProgress(
+        modifier = Modifier,
+        progress = 100f,
+        rotate = Rotate.RIGHT,
+        roundedBorder = true,
+        durationInMilliSecond = 2000,
+        startDelay = 1000,
+        radius = 80.dp,
+        waveAnimation = true
+    )
 }
