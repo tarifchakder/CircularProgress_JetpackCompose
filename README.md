@@ -42,6 +42,7 @@ fun simpleCircularProgress() {
     )
 }
 ```
+
 Animated Determinate Progressbar
 
 ```Kotlin
