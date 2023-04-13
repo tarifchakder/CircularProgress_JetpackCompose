@@ -32,11 +32,11 @@ fun DeterminateProgress(
     trackColor: Color = Color.Blue.copy(0.2f),
     indicatorStrokeWidth: Dp = 10.dp,
     trackStrokeWidth: Dp = 10.dp,
-    progress: Float = 0f,
+    progress: Float = 90f,
     rotate: Rotate = Rotate.RIGHT,
     roundedBorder: Boolean = true,
-    durationInMilliSecond: Int = 2000,
-    startDelay: Int = 1000,
+    durationInMilliSecond: Int = 10000,
+    startDelay: Int = 3000,
     waveAnimation: Boolean = true
 ) {
 
@@ -85,8 +85,8 @@ fun DeterminateProgress(
     )
 
     val animatedColor by animatedCircle.animateColor(
-        initialValue = trackColor.copy(0.5f),
-        targetValue = indicatorColor.copy(0.8f),
+        initialValue = trackColor.copy(0.2f),
+        targetValue = indicatorColor.copy(0.4f),
         animationSpec = infiniteRepeatable(tween(2000), RepeatMode.Reverse)
     )
 
@@ -145,8 +145,8 @@ fun DeterminateProgress(
         }
 
         Text(
-            text = progress.toInt().toString() + "%",
-            color = trackColor,
+            text = progressAnim.toInt().toString() + "%",
+            color = indicatorColor,
             fontSize = radius.value.sp / 2,
             fontWeight = FontWeight.SemiBold,
             fontFamily = FontFamily.Monospace,

@@ -29,11 +29,11 @@ class MainActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    SimpleCircularProgress()
+                  //  SimpleCircularProgress()
 
                    // Spacer(modifier = Modifier.padding(10.dp))
 
-                  //  determinateProgressSample()
+                    determinateProgressSample()
 
                   //  Spacer(modifier = Modifier.padding(10.dp))
 
@@ -78,8 +78,6 @@ fun determinateProgressSample() {
         progress = 100f,
         rotate = Rotate.RIGHT,
         roundedBorder = true,
-        durationInMilliSecond = 2000,
-        startDelay = 1000,
         radius = 80.dp,
         waveAnimation = true
     )
