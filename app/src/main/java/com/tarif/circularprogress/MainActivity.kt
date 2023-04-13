@@ -33,13 +33,11 @@ class MainActivity : ComponentActivity() {
 
                    // Spacer(modifier = Modifier.padding(10.dp))
 
-                    determinateProgressSample()
+                    //determinateProgressSample()
 
                   //  Spacer(modifier = Modifier.padding(10.dp))
 
-                  //  infiniteProgressSample()
-
-                  //  Spacer(modifier = Modifier.padding(10.dp))
+                   infiniteProgressSample()
 
                 }
             }
