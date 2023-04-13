@@ -22,6 +22,7 @@ dependencies {
 ```
 
 ## Usage
+Simple Circular ProgressBar
 ```kotlin
 @Composable
 fun simpleCircularProgress() {
