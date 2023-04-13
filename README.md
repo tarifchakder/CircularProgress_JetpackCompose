@@ -22,8 +22,6 @@ dependencies {
 ```
 ## Usage
 
-Simple Circular Progress
-
 ```kotlin
 @Composable
 fun simpleCircularProgress() {
